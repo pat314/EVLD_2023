@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20"
+            fx:controller="com.example.final_dictionary.AutomaticSoundController">
+    <children>
+        <Label alignment="CENTER" layoutX="50.0" layoutY="36.0" prefHeight="58.0" prefWidth="195.0"
+               text="Automatic sound">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Button fx:id="man" layoutX="170.0" layoutY="130.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0"
+                styleClass="circleTickButton" stylesheets="@Style.css">
+            <font>
+                <Font size="1.0"/>
+            </font>
+        </Button>
+        <Button fx:id="woman" layoutX="170.0" layoutY="170.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0"
+                styleClass="circleTickButton" stylesheets="@Style.css">
+            <font>
+                <Font size="1.0"/>
+            </font>
+        </Button>
+        <Label layoutX="230.0" layoutY="123.0" prefHeight="36.0" prefWidth="95.0" text="Man">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="230.0" layoutY="163.0" prefHeight="36.0" prefWidth="95.0" text="Woman">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

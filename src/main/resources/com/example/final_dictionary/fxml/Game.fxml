@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="650.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/20" fx:controller="com.example.final_dictionary.GameController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2b800" height="50.0" stroke="BLACK" strokeType="INSIDE"
+                   strokeWidth="0.0" width="1200.0"/>
+        <Label layoutX="72.0" layoutY="4.0" prefHeight="39.0" prefWidth="102.0" text="Game" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="32.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="5.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/game2icon.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="50.0" layoutY="50.0" prefHeight="50.0" prefWidth="650.0"
+               text="Advanced your vocabulary with our games and quizzes. ">
+            <font>
+                <Font name="Segoe UI Bold" size="22.0"/>
+            </font>
+        </Label>
+        <AnchorPane layoutX="70.0" layoutY="135.0" prefHeight="100.0" prefWidth="1070.0" styleClass="roundedRectangle"
+                    stylesheets="@Style.css">
+            <children>
+                <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="45.0" layoutY="15.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/flashcardPic.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="200.0" layoutY="30.0" prefHeight="45.0" prefWidth="210.0" text="Flashcard">
+                    <font>
+                        <Font name="Segoe UI Bold" size="36.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="launchFlashcard" layoutX="864.0" layoutY="26.0" mnemonicParsing="false" prefHeight="53.0"
+                        prefWidth="167.0" styleClass="launchGameButton" stylesheets="@Style.css" text="Launch">
+                    <font>
+                        <Font name="Segoe UI Bold" size="24.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="70.0" layoutY="265.0" prefHeight="100.0" prefWidth="1070.0" styleClass="roundedRectangle"
+                    stylesheets="@Style.css">
+            <children>
+                <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="45.0" layoutY="15.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/multiplechoice.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="200.0" layoutY="30.0" prefHeight="45.0" prefWidth="210.0" text="Studying">
+                    <font>
+                        <Font name="Segoe UI Bold" size="36.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="launchStudying" layoutX="864.0" layoutY="26.0" mnemonicParsing="false" prefHeight="53.0"
+                        prefWidth="167.0" styleClass="launchGameButton" stylesheets="@Style.css" text="Launch">
+                    <font>
+                        <Font name="Segoe UI Bold" size="24.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="70.0" layoutY="395.0" prefHeight="100.0" prefWidth="1070.0" styleClass="roundedRectangle"
+                    stylesheets="@Style.css">
+            <children>
+                <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="45.0" layoutY="15.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/challenging.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="200.0" layoutY="30.0" prefHeight="45.0" prefWidth="210.0" text="Challenging">
+                    <font>
+                        <Font name="Segoe UI Bold" size="36.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="launchChallenging" layoutX="864.0" layoutY="26.0" mnemonicParsing="false"
+                        prefHeight="53.0" prefWidth="167.0" styleClass="launchGameButton" stylesheets="@Style.css"
+                        text="Launch">
+                    <font>
+                        <Font name="Segoe UI Bold" size="24.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="70.0" layoutY="525.0" prefHeight="100.0" prefWidth="1070.0" styleClass="roundedRectangle"
+                    stylesheets="@Style.css">
+            <children>
+                <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="45.0" layoutY="15.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/matching.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="200.0" layoutY="30.0" prefHeight="45.0" prefWidth="210.0" text="Matching">
+                    <font>
+                        <Font name="Segoe UI Bold" size="36.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="launchMatching" layoutX="864.0" layoutY="26.0" mnemonicParsing="false" prefHeight="53.0"
+                        prefWidth="167.0" styleClass="launchGameButton" stylesheets="@Style.css" text="Launch">
+                    <font>
+                        <Font name="Segoe UI Bold" size="24.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

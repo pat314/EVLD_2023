@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" prefHeight="650.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/21" fx:controller="com.example.final_dictionary.TranslateController">
+    <children>
+        <AnchorPane fx:id="warning" disable="true" layoutX="330.0" layoutY="185.0" prefHeight="250.0" prefWidth="540.0"
+                    styleClass="whiteBackground" stylesheets="@Style.css" visible="false">
+            <children>
+                <Label alignment="CENTER" layoutX="183.0" layoutY="5.0" prefHeight="54.0" prefWidth="172.0"
+                       text="Warning">
+                    <font>
+                        <Font name="Segoe UI Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="notificationText" alignment="CENTER" layoutX="9.0" layoutY="107.0" prefHeight="35.0"
+                       prefWidth="519.0" text="Please enter text first!">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="okay" layoutX="205.0" layoutY="194.0" mnemonicParsing="false" prefHeight="42.0"
+                        prefWidth="127.0" styleClass="savebutton" stylesheets="@Style.css" text="Okay"/>
+            </children>
+        </AnchorPane>
+        <Rectangle arcWidth="5.0" fill="#0b4a97" height="50.0" stroke="TRANSPARENT" strokeType="INSIDE"
+                   strokeWidth="0.0" width="1200.0"/>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="30.0" layoutY="5.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/translateIcon.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="76.0" layoutY="-3.0" prefHeight="55.0" prefWidth="260.0" text="Online Translator"
+               textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="30.0"/>
+            </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="100.0" text="Get a quick, free translation!" textFill="#02096b">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="135.0" text="Type your text and click Translate to see the translation"
+               textFill="#14056b">
+            <font>
+                <Font name="Segoe UI Semibold" size="18.0"/>
+            </font>
+        </Label>
+        <AnchorPane layoutX="50.0" layoutY="235.0" prefHeight="335.0" prefWidth="497.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="335.0" stroke="TRANSPARENT"
+                           strokeType="INSIDE" width="497.0">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </Rectangle>
+                <TextArea fx:id="inputfieldtranslate" prefHeight="285.0" prefWidth="497.0"
+                          promptText="Enter your text here" styleClass="inputfieldtranslate" stylesheets="@Style.css"
+                          wrapText="true">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </TextArea>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="654.0" layoutY="235.0" prefHeight="335.0" prefWidth="497.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="335.0" stroke="TRANSPARENT"
+                           strokeType="INSIDE" width="497.0">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </Rectangle>
+                <TextArea fx:id="showmeaning" editable="false" prefHeight="285.0" prefWidth="497.0"
+                          styleClass="inputfieldtranslate" stylesheets="@Style.css" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </TextArea>
+            </children>
+        </AnchorPane>
+        <Button fx:id="transfer" contentDisplay="GRAPHIC_ONLY" layoutX="577.0" layoutY="385.0" mnemonicParsing="false"
+                onAction="#handleTransferButton" prefHeight="27.0" prefWidth="32.0" styleClass="menuIconButton"
+                stylesheets="@Style.css">
+            <graphic>
+                <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/trranfer.png"/>
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </ImageView>
+            </graphic>
+        </Button>
+        <ChoiceBox fx:id="translate" layoutX="50.0" layoutY="188.0" prefHeight="36.0" prefWidth="150.0"
+                   stylesheets="@Style.css"/>
+        <ChoiceBox fx:id="meaning" layoutX="654.0" layoutY="188.0" prefHeight="36.0" prefWidth="150.0"
+                   stylesheets="@Style.css"/>
+        <Button fx:id="soundButton" contentDisplay="GRAPHIC_ONLY" layoutX="680.0" layoutY="522.0"
+                mnemonicParsing="false" onAction="#handleSoundButton" styleClass="menuIconButton"
+                stylesheets="@Style.css" text="sound">
+            <graphic>
+                <ImageView fitHeight="42.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/Speaker.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </children>
+    <cursor>
+        <Cursor fx:constant="HAND"/>
+    </cursor>
+</AnchorPane>

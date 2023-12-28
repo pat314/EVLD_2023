@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" prefHeight="700.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/20" fx:controller="com.example.final_dictionary.FlashcardController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffb097" height="50.0" stroke="BLACK" strokeType="INSIDE"
+                   strokeWidth="0.0" width="1200.0"/>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="25.0" layoutY="5.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/flashcard.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="100.0" layoutY="7.0" prefHeight="37.0" prefWidth="124.0" text="Flashcards">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Button fx:id="backward" contentDisplay="GRAPHIC_ONLY" layoutX="440.0" layoutY="610.0" mnemonicParsing="false"
+                prefHeight="28.0" prefWidth="66.0" styleClass="menuIconButton" stylesheets="@Style.css" text="back">
+            <graphic>
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/quiz/left.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="forward" contentDisplay="GRAPHIC_ONLY" layoutX="686.0" layoutY="610.0" mnemonicParsing="false"
+                prefHeight="50.0" prefWidth="50.0" styleClass="menuIconButton" stylesheets="@Style.css" text="next">
+            <graphic>
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/quiz/right.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label fx:id="quantity" alignment="CENTER" layoutX="525.0" layoutY="622.0" prefHeight="30.0" prefWidth="150.0"
+               text=".../200">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0"/>
+            </font>
+        </Label>
+        <StackPane fx:id="stackPane2" layoutX="200.0" layoutY="90.0" prefHeight="490.0" prefWidth="800.0">
+            <children>
+                <AnchorPane fx:id="flashcardBack2" prefHeight="490.0" prefWidth="800.0" styleClass="flashcardMeaning"
+                            stylesheets="@Game.css" visible="false">
+                    <children>
+                        <Label fx:id="ipa2" alignment="CENTER" layoutX="300.0" layoutY="150.0" prefHeight="50.0"
+                               prefWidth="200.0" wrapText="true">
+                            <font>
+                                <Font name="Segoe UI Bold Italic" size="24.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="meaning2" alignment="CENTER" layoutX="250.0" layoutY="200.0" prefHeight="50.0"
+                               prefWidth="300.0" wrapText="true">
+                            <font>
+                                <Font name="Segoe UI Bold" size="24.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="flashcardFront2" prefHeight="490.0" prefWidth="800.0" styleClass="flashcardWord"
+                            stylesheets="@Game.css">
+                    <effect>
+                        <DropShadow height="90.0" radius="44.5" width="90.0">
+                            <color>
+                                <Color red="1.0" green="0.6901960968971252" blue="0.5921568870544434"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <children>
+                        <Label fx:id="word2" alignment="CENTER" layoutX="200.0" layoutY="199.0" prefHeight="80.0"
+                               prefWidth="400.0" textFill="#951d05" wrapText="true">
+                            <font>
+                                <Font name="Segoe UI Bold" size="36.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+        <StackPane fx:id="stackPane1" layoutX="200.0" layoutY="90.0" prefHeight="490.0" prefWidth="800.0">
+            <children>
+                <AnchorPane fx:id="flashcardBack1" prefHeight="490.0" prefWidth="800.0" styleClass="flashcardMeaning"
+                            stylesheets="@Game.css" visible="false">
+                    <children>
+                        <Label fx:id="ipa1" alignment="CENTER" layoutX="300.0" layoutY="150.0" prefHeight="50.0"
+                               prefWidth="200.0" wrapText="true">
+                            <font>
+                                <Font name="Segoe UI Bold Italic" size="24.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="meaning1" alignment="CENTER" layoutX="250.0" layoutY="200.0" prefHeight="50.0"
+                               prefWidth="300.0" wrapText="true">
+                            <font>
+                                <Font name="Segoe UI Bold" size="24.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="flashcardFront1" prefHeight="490.0" prefWidth="800.0" styleClass="flashcardWord"
+                            stylesheets="@Game.css">
+                    <effect>
+                        <DropShadow height="90.0" radius="44.5" width="90.0">
+                            <color>
+                                <Color red="1.0" green="0.6901960968971252" blue="0.5921568870544434"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <children>
+                        <Label fx:id="word1" alignment="CENTER" layoutX="200.0" layoutY="199.0" prefHeight="80.0"
+                               prefWidth="400.0" textFill="#951d05" wrapText="true">
+                            <font>
+                                <Font name="Segoe UI Bold" size="36.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

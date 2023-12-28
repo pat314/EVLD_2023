@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.HTMLEditor?>
+<?import javafx.scene.web.WebView?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="homeAP" prefHeight="650.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/20.0.1" fx:controller="com.example.final_dictionary.HomeController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="607.0" layoutY="45.0" stroke="TRANSPARENT"
+                   strokeType="INSIDE" width="1202.0"/>
+        <ImageView fitHeight="324.0" fitWidth="412.0" layoutX="361.0" layoutY="163.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/searchNone.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="416.0" layoutY="510.0" text="Search something">
+            <font>
+                <Font name="Segoe UI Bold" size="36.0"/>
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0b4a97" height="50.0" stroke="TRANSPARENT" strokeType="INSIDE"
+                   width="1203.0"/>
+        <TextField fx:id="searchBar" layoutX="225.0" layoutY="5.0" prefHeight="40.0" prefWidth="684.0"
+                   promptText="Search words" styleClass="text-field" stylesheets="@Style.css">
+            <font>
+                <Font name="Segoe UI Light" size="14.0"/>
+            </font>
+        </TextField>
+        <ListView fx:id="listWord" layoutX="6.0" layoutY="73.0" prefHeight="570.0" prefWidth="200.0"
+                  style="-fx-background-color: #F2F2F2;" stylesheets="@Style.css"/>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="76.0" layoutY="48.0" prefHeight="30.0"
+               prefWidth="48.0" styleClass="indexLabel" stylesheets="@Style.css" text="Index">
+            <font>
+                <Font name="Segoe UI Bold" size="14.0"/>
+            </font>
+        </Label>
+        <AnchorPane fx:id="scrollpane" layoutX="229.0" layoutY="66.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                    minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="684.0" visible="false">
+            <children>
+                <WebView fx:id="webView" layoutY="6.0" prefHeight="571.0" prefWidth="684.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </WebView>
+                <Button fx:id="saveButton" contentDisplay="GRAPHIC_ONLY" layoutX="471.0" layoutY="14.0"
+                        mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/greyStarIcon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="speech" layoutX="425.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0"
+                        prefWidth="36.0" styleClass="menuIconButton" stylesheets="@Style.css">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/Speaker.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+                <Button fx:id="unsaveButton" contentDisplay="GRAPHIC_ONLY" layoutX="470.0" layoutY="14.0"
+                        mnemonicParsing="false" prefHeight="33.0" prefWidth="33.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css" visible="false">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/yellowStarIcon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="editButton" contentDisplay="GRAPHIC_ONLY" layoutX="570.0" layoutY="14.0"
+                        mnemonicParsing="false" styleClass="menuIconButton" stylesheets="@Style.css" text="Button">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/editICO.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="trashButton" contentDisplay="GRAPHIC_ONLY" layoutX="621.0" layoutY="14.0"
+                        mnemonicParsing="false" styleClass="menuIconButton" stylesheets="@Style.css" text="trash">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/trash.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="seeMoreButton" contentDisplay="GRAPHIC_ONLY" layoutX="521.0" layoutY="14.0"
+                        mnemonicParsing="false" styleClass="menuIconButton" stylesheets="@Style.css" text="Link">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/seeMore.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <HTMLEditor fx:id="htmlTextEditor"
+                            htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;"
+                            prefHeight="571.0" prefWidth="684.0" visible="false"/>
+                <Button fx:id="saveEditButton" contentDisplay="TEXT_ONLY" layoutX="599.0" layoutY="2.0"
+                        mnemonicParsing="false" prefHeight="29.0" prefWidth="86.0" styleClass="savebutton"
+                        stylesheets="@Style.css" text="Save" visible="false">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/saveICO.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="discardChangeButton" contentDisplay="TEXT_ONLY" disable="true" layoutX="505.0"
+                        layoutY="2.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="85.0"
+                        styleClass="discardbutton" stylesheets="@Style.css" text="Discard" visible="false">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/minusIcon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Line endX="213.0" endY="64.26667022705078" fill="#1143b7" startX="212.99998474121094"
+              startY="645.6000366210938" stroke="#1123c4"/>
+        <AnchorPane fx:id="usernameAP" disable="true" layoutX="930.0" prefHeight="197.0" prefWidth="270.0"
+                    styleClass="menuBackground" stylesheets="@Style.css" visible="false">
+            <children>
+                <Label alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="35.0" layoutY="65.0" prefHeight="48.0"
+                       prefWidth="193.0" text="Welcome Username!">
+                    <font>
+                        <Font name="Arial" size="22.0"/>
+                    </font>
+                </Label>
+                <Line endX="196.7333984375" endY="4.0000152587890625" layoutX="54.0" layoutY="110.0"
+                      startX="-39.33331298828125" startY="4.0000152587890625" stroke="#0066cc"/>
+                <Button alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="70.0" layoutY="131.0"
+                        mnemonicParsing="false" prefHeight="37.0" prefWidth="132.0" styleClass="signOutButton"
+                        stylesheets="@Style.css" text="Sign out">
+                    <font>
+                        <Font name="System Bold" size="18.0"/>
+                    </font>
+                </Button>
+                <ImageView fitHeight="45.0" fitWidth="139.0" layoutX="68.0" layoutY="17.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/username.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Button fx:id="searchButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="870.0" layoutY="10.0"
+                mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="menuIconButton"
+                stylesheets="@Style.css" text="magnifyingGlass">
+            <graphic>
+                <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/kinhlup.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <AnchorPane layoutX="923.0" layoutY="73.0" prefHeight="301.0" prefWidth="271.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfece9" height="301.0" stroke="TRANSPARENT"
+                           strokeType="INSIDE" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="271.0"/>
+                <Label fx:id="dateLabel" alignment="CENTER" layoutX="24.0" layoutY="9.0" prefHeight="24.0"
+                       prefWidth="230.0" text="10/11/2023">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="wordLabel" alignment="CENTER" layoutX="41.0" layoutY="93.0" prefHeight="31.0"
+                       prefWidth="187.0" text="Word" textAlignment="CENTER" textFill="#2e4f71">
+                    <font>
+                        <Font name="Segoe UI Bold" size="24.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="posLabel" alignment="CENTER" layoutX="41.0" layoutY="69.0" prefHeight="24.0"
+                       prefWidth="187.0" text="noun">
+                    <font>
+                        <Font name="Segoe UI Italic" size="18.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="seeDetail" layoutX="46.0" layoutY="213.0" mnemonicParsing="false" prefHeight="30.0"
+                        prefWidth="186.0" styleClass="seeDetailButton" stylesheets="@Style.css" text="See Detail"/>
+                <Label layoutX="8.0" layoutY="280.0" text="English - Vietnamese Learner's Dictionary Word of the Day"
+                       textFill="#5a5858">
+                    <font>
+                        <Font name="Segoe UI Italic" size="10.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="speech2" contentDisplay="GRAPHIC_ONLY" layoutX="116.0" layoutY="142.0"
+                        mnemonicParsing="false" styleClass="menuIconButton" stylesheets="@Style.css" text="Button">
+                    <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                            <image>
+                                <Image url="@../image/Speaker.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="923.0" layoutY="383.0" prefHeight="257.0" prefWidth="271.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7dd94bf" height="264.0" stroke="TRANSPARENT"
+                           strokeType="INSIDE" style="-fx-arc-height: 30; -fx-arc-width: 30;" visible="false"
+                           width="271.0"/>
+                <Label layoutX="58.0" layoutY="2.0" text="Recently Searched">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <Line endX="124.6181640625" endY="7.62939453125E-6" layoutX="135.0" layoutY="33.0"
+                      startX="-125.85455322265625" startY="7.62939453125E-6"/>
+                <ListView fx:id="historyList" layoutX="10.0" layoutY="42.0" prefHeight="209.0" prefWidth="259.0"
+                          styleClass="history" stylesheets="@Style.css"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="alertPane" disable="true" layoutX="326.0" layoutY="210.0" prefHeight="294.0"
+                    prefWidth="545.0" visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="294.0" stroke="TRANSPARENT"
+                           strokeType="INSIDE" style="-fx-arc-height: 10; -fx-arc-width: 10;" width="545.0">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </Rectangle>
+                <Label layoutX="239.0" layoutY="14.0" text="Alert">
+                    <font>
+                        <Font name="Segoe UI Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="53.0" layoutY="80.0" prefHeight="90.0" prefWidth="435.0"
+                       text="Do you want to update it? Once you update the word, the old data will be replace with the new one."
+                       textAlignment="JUSTIFY" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="acceptButton" layoutX="155.0" layoutY="192.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="237.0" styleClass="discardbutton" stylesheets="@Style.css"
+                        text="I want to update the word"/>
+                <Button fx:id="discardButton" layoutX="155.0" layoutY="239.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="237.0" styleClass="savebutton" stylesheets="@Style.css"
+                        text="No, keep it originally"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="notiPane" disable="true" layoutX="359.0" layoutY="251.0" prefHeight="212.0" prefWidth="481.0"
+                    visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="209.0" stroke="TRANSPARENT"
+                           strokeType="INSIDE" style="-fx-arc-height: 10; -fx-arc-width: 10;" width="482.0">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </Rectangle>
+                <Label layoutX="161.0" layoutY="14.0" text="Notification">
+                    <font>
+                        <Font name="Segoe UI Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="107.0" layoutY="92.0" text="The word is updated successfully!">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="okayButton" layoutX="189.0" layoutY="150.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="102.0" styleClass="savebutton" stylesheets="@Style.css" text="Okay"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="alertPane1" disable="true" layoutX="326.0" layoutY="210.0" prefHeight="294.0"
+                    prefWidth="545.0" visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="294.0" stroke="TRANSPARENT"
+                           strokeType="INSIDE" style="-fx-arc-height: 10; -fx-arc-width: 10;" width="545.0">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </Rectangle>
+                <Label layoutX="239.0" layoutY="14.0" text="Alert">
+                    <font>
+                        <Font name="Segoe UI Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="53.0" layoutY="80.0" prefHeight="90.0"
+                       prefWidth="435.0" text="Are you sure to delete the word?" textAlignment="JUSTIFY"
+                       wrapText="true">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="acceptButton1" layoutX="155.0" layoutY="192.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="237.0" styleClass="discardbutton" stylesheets="@Style.css"
+                        text="Yes, I want to delete that word"/>
+                <Button fx:id="discardButton1" layoutX="155.0" layoutY="239.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="237.0" styleClass="savebutton" stylesheets="@Style.css" text="No, go back"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="notiPane1" disable="true" layoutX="359.0" layoutY="251.0" prefHeight="212.0"
+                    prefWidth="481.0" visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="209.0" stroke="TRANSPARENT"
+                           strokeType="INSIDE" style="-fx-arc-height: 10; -fx-arc-width: 10;" width="482.0">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </Rectangle>
+                <Label layoutX="161.0" layoutY="14.0" text="Notification">
+                    <font>
+                        <Font name="Segoe UI Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="107.0" layoutY="92.0" text="The word is deleted successfully!">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="okayButton1" layoutX="189.0" layoutY="150.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="102.0" styleClass="savebutton" stylesheets="@Style.css" text="Okay"/>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

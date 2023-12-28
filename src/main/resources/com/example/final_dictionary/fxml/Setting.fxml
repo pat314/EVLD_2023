@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="settingAP" prefHeight="650.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/20" fx:controller="com.example.final_dictionary.SettingController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#767171" height="50.0" stroke="BLACK" strokeType="INSIDE"
+                   strokeWidth="0.0" width="1200.0"/>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="5.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/Setting.png"/>
+            </image>
+        </ImageView>
+        <Label alignment="TOP_LEFT" layoutX="90.0" layoutY="3.0" prefHeight="43.0" prefWidth="147.0" text="Settings"
+               textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="36.0"/>
+            </font>
+        </Label>
+        <AnchorPane layoutY="50.0" prefHeight="600.0" prefWidth="300.0" styleClass="settingOptionBar"
+                    stylesheets="@Style.css">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7e6e6" height="600.0" stroke="TRANSPARENT"
+                           strokeType="INSIDE" width="309.0"/>
+                <Label alignment="CENTER" layoutX="29.0" layoutY="14.0" prefHeight="40.0" prefWidth="242.0"
+                       text="Setting Options">
+                    <font>
+                        <Font name="Segoe UI Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="15.0" layoutY="140.0" prefHeight="45.0" prefWidth="250.0" text="Application settings">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="15.0" layoutY="279.0" prefHeight="45.0" prefWidth="250.0" text="User settings">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <Rectangle fx:id="option1" arcHeight="5.0" arcWidth="5.0" fill="#75717138" height="40.0" layoutY="195.0"
+                           stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="309.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color opacity="0.5559211373329163"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="automaticSoundButton" alignment="TOP_LEFT" layoutX="2.0" layoutY="195.0"
+                        mnemonicParsing="false" prefHeight="40.0" prefWidth="309.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css" text="Automatic sound">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Button>
+                <Rectangle fx:id="option2" arcHeight="5.0" arcWidth="5.0" fill="#75717138" height="40.0" layoutY="235.0"
+                           stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="309.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color opacity="0.5559211373329163"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Rectangle fx:id="option3" arcHeight="5.0" arcWidth="5.0" fill="#75717138" height="40.0" layoutY="335.0"
+                           stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="309.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color opacity="0.5559211373329163"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="changePasswordButton" alignment="TOP_LEFT" layoutX="2.0" layoutY="335.0"
+                        mnemonicParsing="false" prefHeight="40.0" prefWidth="309.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css" text="Change password">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Button>
+                <Rectangle fx:id="option4" arcHeight="5.0" arcWidth="5.0" fill="#ff00003c" height="40.0" layoutY="375.0"
+                           stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="309.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color red="1.0" opacity="0.49000000953674316"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="deleteAccountButton" alignment="TOP_LEFT" layoutX="2.0" layoutY="375.0"
+                        mnemonicParsing="false" prefHeight="40.0" prefWidth="309.0" styleClass="deleteusernameButton"
+                        stylesheets="@Style.css" text="Delete account">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Button>
+                <Line endX="212.88180541992188" fill="#888686" layoutX="84.0" layoutY="257.0"
+                      startX="-69.88182067871094" stroke="#0000004a"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="switchOptionAP" layoutX="300.0" layoutY="50.0" prefHeight="600.0" prefWidth="900.0"/>
+    </children>
+</AnchorPane>

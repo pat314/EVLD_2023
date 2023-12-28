@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" prefHeight="700.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/20" fx:controller="com.example.final_dictionary.MatchingController">
+    <children>
+        <AnchorPane fx:id="startAnchorpane" disable="true" layoutY="50.0" prefHeight="650.0" prefWidth="1200.0"
+                    visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="650.0" layoutX="33.0" layoutY="-26.0" stroke="BLACK"
+                           strokeType="INSIDE" strokeWidth="0.0" width="1133.0">
+                    <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.7490196228027344" green="0.5647059082984924"
+                                               opacity="0.8999999761581421"/>
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.0067261834315981185">
+                                    <color>
+                                        <Color red="1.0" green="0.6901960968971252" blue="0.5921568870544434"
+                                               opacity="0.8999999761581421"/>
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.13725490868091583" green="0.13725490868091583"
+                                               blue="0.9921568632125854" opacity="0.8799999952316284"/>
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </fill>
+                    <effect>
+                        <BoxBlur height="12.8" width="12.8"/>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="start" layoutX="532.0" layoutY="522.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="135.0" styleClass="launchGameButton" stylesheets="@Style.css" text="Start">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Button>
+                <Label alignment="CENTER" layoutX="382.0" layoutY="-10.0" prefHeight="119.0" prefWidth="435.0"
+                       styleClass="gameTitle" stylesheets="@Game.css" text="Matching">
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.5065789222717285"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Label>
+                <ImageView fitHeight="265.0" fitWidth="289.0" layoutX="167.0" layoutY="166.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/matchingPic.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="497.0" layoutY="232.0" lineSpacing="2.0" prefHeight="90.0" prefWidth="500.0"
+                       text="Ten words and their definitions will be shown in 20 boxes randomly. " textFill="WHITE"
+                       wrapText="true">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="497.0" layoutY="297.0" lineSpacing="2.0" prefHeight="68.0" prefWidth="500.0"
+                       styleClass="gameDescription" stylesheets="@Game.css"
+                       text="Try to match all the terms with their definitions as quickly as possible. Avoid incorrect matches. They add extra time!"
+                       textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0"
+                   width="1200.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="1.0" green="0.6901960968971252" blue="0.5921568870544434"/>
+                            </color>
+                        </Stop>
+                        <Stop offset="0.08010272741349302">
+                            <color>
+                                <Color red="1.0" green="0.6901960968971252" blue="0.5921568870544434"/>
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.31229662895202637" green="0.31229662895202637" blue="0.9580952525138855"/>
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="25.0" layoutY="5.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/matching.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="100.0" layoutY="7.0" prefHeight="37.0" prefWidth="126.0" text="Matching">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Label fx:id="box1" alignment="CENTER" layoutX="40.0" layoutY="140.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="word" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box5" alignment="CENTER" layoutX="960.0" layoutY="140.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="word" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box3" alignment="CENTER" layoutX="500.0" layoutY="140.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="word" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box2" alignment="CENTER" layoutX="270.0" layoutY="140.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="word" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box4" alignment="CENTER" layoutX="730.0" layoutY="140.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="word" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box6" alignment="CENTER" layoutX="40.0" layoutY="280.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="word" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box10" alignment="CENTER" layoutX="960.0" layoutY="280.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="word" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box8" alignment="CENTER" layoutX="500.0" layoutY="280.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="word" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box7" alignment="CENTER" layoutX="270.0" layoutY="280.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="word" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box9" alignment="CENTER" layoutX="730.0" layoutY="280.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="word" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box11" alignment="CENTER" layoutX="40.0" layoutY="420.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="meaning" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box15" alignment="CENTER" layoutX="960.0" layoutY="420.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="meaning" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box13" alignment="CENTER" layoutX="500.0" layoutY="420.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="meaning" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box12" alignment="CENTER" layoutX="270.0" layoutY="420.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="meaning" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box14" alignment="CENTER" layoutX="730.0" layoutY="420.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="meaning" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box16" alignment="CENTER" layoutX="40.0" layoutY="560.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="meaning" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box17" alignment="CENTER" layoutX="270.0" layoutY="560.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="meaning" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box18" alignment="CENTER" layoutX="500.0" layoutY="560.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="meaning" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box19" alignment="CENTER" layoutX="730.0" layoutY="560.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="meaning" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label fx:id="box20" alignment="CENTER" layoutX="960.0" layoutY="560.0" prefHeight="100.0" prefWidth="200.0"
+               styleClass="boxMatching" stylesheets="@Game.css" text="meaning" textAlignment="CENTER" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+            <effect>
+                <DropShadow offsetX="5.0" offsetY="3.0">
+                    <color>
+                        <Color opacity="0.38815784454345703"/>
+                    </color>
+                </DropShadow>
+            </effect>
+        </Label>
+        <Label layoutX="69.0" layoutY="73.0" prefHeight="38.0" prefWidth="440.0"
+               text="Can you match all the cards together?">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0"/>
+            </font>
+        </Label>
+        <AnchorPane fx:id="notification" layoutX="345.0" layoutY="145.0" prefHeight="410.0" prefWidth="510.0"
+                    styleClass="notificationFinished" stylesheets="@Game.css">
+            <children>
+                <Label alignment="CENTER" layoutX="160.0" layoutY="16.0" prefHeight="30.0" prefWidth="200.0"
+                       text="Congratulation!">
+                    <font>
+                        <Font name="Segoe UI Bold" size="24.0"/>
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="35.0" layoutY="310.0" prefHeight="38.0" prefWidth="440.0"
+                       text="Do you want to play again?">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="completionTime" alignment="CENTER" layoutX="120.0" layoutY="49.0" prefHeight="44.0"
+                       prefWidth="270.0" text="Completion Time: 12' 04s">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="yes" layoutX="130.0" layoutY="350.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="100.0" styleClass="launchButton" stylesheets="@Game.css" text="Replay">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="no" layoutX="280.0" layoutY="350.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="100.0" styleClass="discardButton" stylesheets="@Game.css" text="Quit">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Button>
+                <ImageView fitHeight="190.0" fitWidth="383.0" layoutX="85.0" layoutY="120.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/congratulation.gif"/>
+                    </image>
+                </ImageView>
+                <Label fx:id="record" alignment="CENTER" layoutX="120.0" layoutY="75.0" prefHeight="44.0"
+                       prefWidth="270.0" text="Record: " textFill="#ff0016">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow/>
+            </effect>
+        </AnchorPane>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="480.0" layoutY="5.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/clock.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="remainingTime" layoutX="540.0" layoutY="5.0" prefHeight="40.0" prefWidth="140.0" text="Time: ...">
+            <font>
+                <Font name="Segoe UI Bold" size="22.0"/>
+            </font>
+        </Label>
+        <Button fx:id="replay" layoutX="1065.0" layoutY="69.0" mnemonicParsing="false" prefHeight="33.0"
+                prefWidth="83.0" styleClass="launchButton" stylesheets="@Game.css" text="Replay"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="650.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/20.0.1" fx:controller="com.example.final_dictionary.InfoController">
+    <children>
+        <Label layoutX="208.0" layoutY="31.0" text="English - Vietnamese Learner's Dictionary (First edition)"
+               textFill="#02096b">
+            <font>
+                <Font name="Segoe UI Bold" size="36.0"/>
+            </font>
+        </Label>
+        <Label layoutX="209.0" layoutY="75.0"
+               text="Inspired by the Oxford Advanced Learner's Dictionary 9th edition DVD-ROM">
+            <font>
+                <Font name="Segoe UI Semibold" size="18.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="32.0" layoutY="23.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/logo.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="207.0" layoutY="512.0" text="Contact us" textFill="#923100">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Hyperlink fx:id="tuphan" layoutX="597.0" layoutY="584.0" onAction="#tuphan" text="Phan Anh Tú"
+                   textFill="#0e0101">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0"/>
+            </font>
+        </Hyperlink>
+        <Hyperlink fx:id="anhtuan" layoutX="290.0" layoutY="583.0" onAction="#anhtuan" text="Mai Anh Tuấn"
+                   textFill="#0e0101">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0"/>
+            </font>
+        </Hyperlink>
+        <Hyperlink fx:id="tuantran" layoutX="922.0" layoutY="584.0" onAction="#tuantran" text="Trần Minh Tuấn"
+                   textFill="#0e0101">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0"/>
+            </font>
+        </Hyperlink>
+        <Label layoutX="209.0" layoutY="116.0" text="What's in our dictionary?" textFill="#923100">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="308.0" layoutY="262.0" text="Search">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="207.0" layoutY="146.0" prefHeight="114.0" prefWidth="895.0"
+               text="This is the first edition English - Vietnamese dictionary is planned and implemented by a group of 3 students in University of Engineering and Technology. The Dictionary section includes about 100,000 English words with Vietnamese meanings and explainations, following by comprehensive, practical examples. This application contains:"
+               textAlignment="JUSTIFY" wrapText="true">
+            <font>
+                <Font name="Segoe UI Semibold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="383.0" layoutY="259.0" prefHeight="50.0" prefWidth="723.0"
+               text="Just search any word you like on the search bar and then enter or hit the search button to get the meaning and its examples."
+               wrapText="true">
+            <font>
+                <Font name="Segoe UI Italic" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="324.0" layoutY="317.0" text="Save">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="328.0" layoutY="344.0" text="Add">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="210.0" layoutY="396.0" text="Modifiy / Remove">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="227.0" layoutY="422.0" prefHeight="24.0" prefWidth="140.0" text="Translate online">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="275.0" layoutY="472.0" text=" Practising">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="383.0" layoutY="316.0" prefHeight="27.0" prefWidth="723.0"
+               text="The dictionary provide a bookmark for you to save your favourite words when searching."
+               wrapText="true">
+            <font>
+                <Font name="Segoe UI Italic" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="383.0" layoutY="338.0" prefHeight="57.0" prefWidth="723.0"
+               text="Having any fantastic words? Apart from those available words we provided for you, you can also add new words to the dictionary."
+               wrapText="true">
+            <font>
+                <Font name="Segoe UI Italic" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="383.0" layoutY="394.0" prefHeight="27.0" prefWidth="723.0"
+               text="You can also change or append the meaning, or delete words if necessary." wrapText="true">
+            <font>
+                <Font name="Segoe UI Italic" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="383.0" layoutY="421.0" prefHeight="51.0" prefWidth="723.0"
+               text="When having connected to the internet, you can translate words or sentences or even a paragraph online in the Translate Online section."
+               wrapText="true">
+            <font>
+                <Font name="Segoe UI Italic" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="383.0" layoutY="470.0" prefHeight="27.0" prefWidth="723.0"
+               text="Strengthen you vocabulary by games such as...." wrapText="true">
+            <font>
+                <Font name="Segoe UI Italic" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="207.0" layoutY="538.0" prefHeight="15.0" prefWidth="895.0"
+               text="We hope that you will enjoy using the English - Vietnamese Learner's Dictionary 1st edition."
+               textAlignment="JUSTIFY" wrapText="true">
+            <font>
+                <Font name="Segoe UI Semibold" size="18.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="243.0" layoutY="584.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/github.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="871.0" layoutY="584.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/github.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="548.0" layoutY="583.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/github.png"/>
+            </image>
+        </ImageView>
+    </children>
+    <cursor>
+        <Cursor fx:constant="DEFAULT"/>
+    </cursor>
+</AnchorPane>

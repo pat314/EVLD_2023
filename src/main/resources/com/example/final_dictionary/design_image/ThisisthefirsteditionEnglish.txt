@@ -1,0 +1,10 @@
+This is the first edition English - Vietnamese dictionary is planned and implemented by a group of 3 students in University of Engineering and Technology. The Dictionary section includes about 50,000 English words with Vietnamese meanings and explainations, following by comprehensive, practical examples. This application contains:
+Search words: Just search any word you like on the search bar and then enter or hit the search button to get the meaning and its examples.
+Save words: The dictionary provide a bookmark for you to save your favourite words when searching.
+Add words: Having any fantastic words? Apart from those available words we provided for you, you can also add new words to the dictionary.
+Modifiy / Remove words: You can also change or append the meaning of a word if necessary.
+Translate online: When having connected to the internet, you can translate words or sentences or even a paragraph online in the Translate Online section.
+Practise your vocabulary: Strengthen you vocabulary by games such as....
+
+Contact us
+21 17 62 17

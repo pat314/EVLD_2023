@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="root" prefHeight="700.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/20" fx:controller="com.example.final_dictionary.ChallengingController">
+    <children>
+        <AnchorPane fx:id="startAnchorpane" disable="true" layoutY="50.0" prefHeight="650.0" prefWidth="1200.0"
+                    visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="650.0" layoutX="33.0" layoutY="-26.0" stroke="BLACK"
+                           strokeType="INSIDE" strokeWidth="0.0" width="1133.0">
+                    <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" green="0.9019607901573181" blue="0.6000000238418579"
+                                               opacity="0.8999999761581421"/>
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.0067261834315981185">
+                                    <color>
+                                        <Color red="1.0" green="0.9019607901573181" blue="0.6000000238418579"
+                                               opacity="0.8999999761581421"/>
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.43417553064670966">
+                                    <color>
+                                        <Color red="1.0" green="0.7607843279838562" blue="0.686274528503418"/>
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.7607843279838562" green="0.9960784316062927"
+                                               blue="0.95686274766922"/>
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </fill>
+                    <effect>
+                        <BoxBlur height="12.8" width="12.81"/>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="start" layoutX="532.0" layoutY="522.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="135.0" styleClass="launchGameButton" stylesheets="@Style.css" text="Start">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Button>
+                <Label alignment="CENTER" layoutX="382.0" layoutY="-10.0" prefHeight="119.0" prefWidth="435.0"
+                       styleClass="gameTitle" stylesheets="@Game.css" text="Challenging">
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color opacity="0.3815789222717285"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Label>
+                <ImageView fitHeight="265.0" fitWidth="289.0" layoutX="167.0" layoutY="166.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/challengePic.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="497.0" layoutY="166.0" lineSpacing="2.0" prefHeight="90.0" prefWidth="500.0"
+                       text="You will have a set of 20 questions with given Vietnamese meaning and 5 seconds to choose the most suitable English lexis."
+                       textAlignment="JUSTIFY" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="497.0" layoutY="256.0" lineSpacing="2.0" prefHeight="40.0" prefWidth="500.0"
+                       styleClass="gameDescription" stylesheets="@Game.css"
+                       text="Every correct answer you will get 10 points." wrapText="true">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="497.0" layoutY="296.0" lineSpacing="2.0" prefHeight="61.0" prefWidth="500.0"
+                       styleClass="gameDescription" stylesheets="@Game.css"
+                       text="However, be careful as you also lose 5 points for each incorrect choice."
+                       textAlignment="JUSTIFY" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="497.0" layoutY="356.0" lineSpacing="2.0" prefHeight="46.0" prefWidth="500.0"
+                       styleClass="gameDescription" stylesheets="@Game.css"
+                       text="Try your best and get the as high score as you can!" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0f0f0" height="701.0" stroke="BLACK" strokeType="INSIDE"
+                   strokeWidth="0.0" width="1200.0"/>
+        <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#f0f0f000" height="630.0" stroke="BLACK"
+                   strokeType="INSIDE" strokeWidth="0.0" width="1200.0"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0"
+                   width="1200.0">
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="1.0" green="0.9024999737739563" blue="0.6100000143051147"
+                                       opacity="0.8999999761581421"/>
+                            </color>
+                        </Stop>
+                        <Stop offset="0.0067261834315981185">
+                            <color>
+                                <Color red="1.0" green="0.9024999737739563" blue="0.6100000143051147"
+                                       opacity="0.8999999761581421"/>
+                            </color>
+                        </Stop>
+                        <Stop offset="0.43417553064670966">
+                            <color>
+                                <Color red="1.0" green="0.7607843279838562" blue="0.686274528503418"/>
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.7607843279838562" green="0.9960784316062927" blue="0.95686274766922"/>
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="25.0" layoutY="5.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/challenging.png"/>
+            </image>
+        </ImageView>
+        <Label layoutX="100.0" layoutY="7.0" prefHeight="37.0" prefWidth="150.0" text="Challenging">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0"/>
+            </font>
+        </Label>
+        <AnchorPane fx:id="resultAP" layoutY="630.0" prefHeight="70.0" prefWidth="1200.0" styleClass="challenging"
+                    stylesheets="@Game.css" visible="false">
+            <children>
+                <Button fx:id="next" layoutX="1045.0" layoutY="15.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="120.0" styleClass="nextStudying" stylesheets="@Game.css" text="Next"/>
+                <Label fx:id="resultText" alignment="CENTER" layoutX="50.0" layoutY="15.0" prefHeight="40.0"
+                       prefWidth="900.0" text="Well done!">
+                    <font>
+                        <Font name="Segoe UI Bold" size="24.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label fx:id="score" layoutX="1040.0" layoutY="5.0" prefHeight="40.0" prefWidth="132.0" text="Score: 0">
+            <font>
+                <Font name="Segoe UI Bold" size="22.0"/>
+            </font>
+        </Label>
+        <Label fx:id="time" layoutX="540.0" layoutY="5.0" prefHeight="40.0" prefWidth="140.0" text="Time: ...">
+            <font>
+                <Font name="Segoe UI Bold" size="22.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="480.0" layoutY="5.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/clock.png"/>
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="questionAP2" layoutX="75.0" layoutY="80.0" prefHeight="500.0" prefWidth="1050.0"
+                    styleClass="challenging" stylesheets="@Game.css">
+            <children>
+                <Label fx:id="word2" alignment="CENTER" layoutX="70.0" layoutY="329.0" prefHeight="131.0"
+                       prefWidth="443.0" text="Word" textAlignment="CENTER" textFill="#12225b" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI Bold" size="36.0"/>
+                    </font>
+                </Label>
+                <ImageView fx:id="imageView2" fitHeight="306.0" fitWidth="300.0" layoutX="120.0" layoutY="30.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/emptyList.png"/>
+                    </image>
+                </ImageView>
+                <Button fx:id="choiceA2" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="630.0" layoutY="75.0"
+                        mnemonicParsing="false" prefHeight="75.0" prefWidth="350.0" styleClass="choiceButton"
+                        stylesheets="@Game.css" text="Choice A">
+                    <font>
+                        <Font name="Segoe UI" size="20.0"/>
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="67.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/quiz/choiceA.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="choiceB2" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="630.0" layoutY="212.5"
+                        mnemonicParsing="false" prefHeight="75.0" prefWidth="350.0" styleClass="choiceButton"
+                        stylesheets="@Game.css" text="Choice B">
+                    <font>
+                        <Font name="Segoe UI" size="20.0"/>
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="67.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/quiz/choiceB.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="choiceC2" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="630.0" layoutY="350.0"
+                        mnemonicParsing="false" prefHeight="75.0" prefWidth="350.0" styleClass="choiceButton"
+                        stylesheets="@Game.css" text="Choice C">
+                    <font>
+                        <Font name="Segoe UI" size="20.0"/>
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="67.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/quiz/choiceC.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="questionAP1" layoutX="75.0" layoutY="80.0" prefHeight="500.0" prefWidth="1050.0"
+                    styleClass="challenging" stylesheets="@Game.css">
+            <children>
+                <Label fx:id="word1" alignment="CENTER" layoutX="70.0" layoutY="329.0" prefHeight="131.0"
+                       prefWidth="443.0" text="Word" textAlignment="CENTER" textFill="#12225b" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI Bold" size="36.0"/>
+                    </font>
+                </Label>
+                <ImageView fx:id="imageView1" fitHeight="306.0" fitWidth="300.0" layoutX="120.0" layoutY="30.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/emptyList.png"/>
+                    </image>
+                </ImageView>
+                <Button fx:id="choiceA1" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="630.0" layoutY="75.0"
+                        mnemonicParsing="false" prefHeight="75.0" prefWidth="350.0" styleClass="choiceButton"
+                        stylesheets="@Game.css" text="Choice A">
+                    <font>
+                        <Font name="Segoe UI" size="20.0"/>
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="67.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/quiz/choiceA.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="choiceB1" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="630.0" layoutY="212.5"
+                        mnemonicParsing="false" prefHeight="75.0" prefWidth="350.0" styleClass="choiceButton"
+                        stylesheets="@Game.css" text="Choice B">
+                    <font>
+                        <Font name="Segoe UI" size="20.0"/>
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="67.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/quiz/choiceB.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="choiceC1" alignment="TOP_LEFT" graphicTextGap="30.0" layoutX="630.0" layoutY="350.0"
+                        mnemonicParsing="false" prefHeight="75.0" prefWidth="350.0" styleClass="choiceButton"
+                        stylesheets="@Game.css" text="Choice C">
+                    <font>
+                        <Font name="Segoe UI" size="20.0"/>
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="67.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/quiz/choiceC.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="notification" layoutX="355.0" layoutY="155.0" prefHeight="410.0" prefWidth="510.0"
+                    styleClass="notificationFinished" stylesheets="@Game.css">
+            <children>
+                <Label alignment="CENTER" layoutX="160.0" layoutY="16.0" prefHeight="30.0" prefWidth="200.0"
+                       text="Congratulation!">
+                    <font>
+                        <Font name="Segoe UI Bold" size="24.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="finalScore" alignment="CENTER" layoutX="120.0" layoutY="49.0" prefHeight="44.0"
+                       prefWidth="270.0" text="Your score: ">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="quit" layoutX="211.0" layoutY="340.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="100.0" styleClass="discardButton" stylesheets="@Game.css" text="Quit">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Button>
+                <ImageView fitHeight="190.0" fitWidth="383.0" layoutX="85.0" layoutY="130.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/congratulation.gif"/>
+                    </image>
+                </ImageView>
+                <Label fx:id="highestscore" alignment="CENTER" layoutX="120.0" layoutY="80.0" prefHeight="44.0"
+                       prefWidth="270.0" text="Highest Score: " textFill="RED">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow/>
+            </effect>
+        </AnchorPane>
+    </children>
+</AnchorPane>

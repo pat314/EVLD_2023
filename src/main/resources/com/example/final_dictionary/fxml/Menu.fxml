@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="container" prefHeight="701.0" prefWidth="1201.0"
+            xmlns="http://javafx.com/javafx/20" fx:controller="com.example.final_dictionary.MenuController">
+    <children>
+        <Label layoutX="90.0" layoutY="2.0" prefHeight="45.0" prefWidth="454.0"
+               text="English – Vietnamese Learner’s Dictionary">
+            <font>
+                <Font name="Segoe UI Bold" size="22.0"/>
+            </font>
+        </Label>
+        <Button fx:id="showMenu" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="5.0"
+                mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="showMenuButton"
+                stylesheets="@Style.css" text="showMenuButton">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/showMenuButton.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="usernameButton" contentDisplay="RIGHT" layoutX="1030.0" layoutY="2.0" mnemonicParsing="false"
+                prefHeight="45.0" prefWidth="150.0" styleClass="usernameButton" stylesheets="@Style.css">
+            <font>
+                <Font name="Segoe UI" size="14.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Button>
+        <ImageView fitHeight="27.0" fitWidth="26.0" layoutX="1148.0" layoutY="12.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/user.png"/>
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="switchAP" disable="true" layoutY="50.0" prefHeight="650.0" prefWidth="1200.0"
+                    visible="false"/>
+        <AnchorPane fx:id="menuAP" disable="true" prefHeight="700.0" prefWidth="288.0" styleClass="menuBackground"
+                    stylesheets="@Style.css" visible="false">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="16.0" prefHeight="50.0"
+                       prefWidth="114.0" text="MENU">
+                    <font>
+                        <Font name="Arial Bold" size="24.0"/>
+                    </font>
+                </Label>
+                <Line endX="55.79998779296875" endY="-7.62939453125E-6" layoutX="241.0" layoutY="75.0"
+                      startX="-225.80001831054688" startY="-7.62939453125E-6"/>
+                <Rectangle fx:id="section1" arcHeight="5.0" arcWidth="5.0" fill="#75717138" height="60.0"
+                           layoutY="100.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="320.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color opacity="0.5600000023841858"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="homeButton" alignment="TOP_LEFT" graphicTextGap="30.0" layoutY="100.0"
+                        mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css" text="Home">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/HomeButton.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Button>
+                <Rectangle fx:id="section2" arcHeight="5.0" arcWidth="5.0" fill="#75717138" height="60.0"
+                           layoutY="190.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="320.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color opacity="0.5600000023841858"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="savedWordButton" alignment="TOP_LEFT" graphicTextGap="30.0" layoutY="190.0"
+                        mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css" text="Saved word">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/favouriteButton.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Button>
+                <Rectangle fx:id="section3" arcHeight="5.0" arcWidth="5.0" fill="#75717138" height="60.0"
+                           layoutY="280.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="320.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color opacity="0.5600000023841858"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="translateButton" alignment="TOP_LEFT" graphicTextGap="30.0" layoutY="280.0"
+                        mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css" text="Translate Online">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/translateButton.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Button>
+                <Rectangle fx:id="section4" arcHeight="5.0" arcWidth="5.0" fill="#75717138" height="60.0"
+                           layoutY="370.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="320.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color opacity="0.5600000023841858"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="addWordButton" alignment="TOP_LEFT" graphicTextGap="30.0" layoutY="370.0"
+                        mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css" text="Add new words">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/addWordButton.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Button>
+                <Rectangle fx:id="section5" arcHeight="5.0" arcWidth="5.0" fill="#75717138" height="60.0"
+                           layoutY="460.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="320.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color opacity="0.5600000023841858"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="gameButton" alignment="TOP_LEFT" graphicTextGap="30.0" layoutY="460.0"
+                        mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css" text="Game">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/gameButton.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Button>
+                <Rectangle fx:id="section6" arcHeight="5.0" arcWidth="5.0" fill="#75717138" height="60.0"
+                           layoutY="550.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="320.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color opacity="0.5600000023841858"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="settingButton" alignment="TOP_LEFT" graphicTextGap="30.0" layoutY="550.0"
+                        mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css" text="Setting">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/Setting.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Button>
+                <Rectangle fx:id="section7" arcHeight="5.0" arcWidth="5.0" fill="#75717138" height="60.0"
+                           layoutY="640.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="320.0">
+                    <effect>
+                        <DropShadow offsetX="3.0" offsetY="5.0">
+                            <color>
+                                <Color opacity="0.5600000023841858"/>
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Rectangle>
+                <Button fx:id="infoButton" alignment="TOP_LEFT" graphicTextGap="30.0" layoutY="640.0"
+                        mnemonicParsing="false" prefHeight="60.0" prefWidth="320.0" styleClass="menuIconButton"
+                        stylesheets="@Style.css" text="Information">
+                    <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/infoButton.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="quitMenu" contentDisplay="GRAPHIC_ONLY" graphicTextGap="30.0" layoutX="265.0"
+                        mnemonicParsing="false" prefHeight="35.0" prefWidth="34.0" styleClass="menuButton"
+                        stylesheets="@Style.css" text="quitMenuButton">
+                    <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/quitMenuButton.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="usernameAP" disable="true" layoutX="1000.0" prefHeight="150.0" prefWidth="200.0"
+                    styleClass="usernameAP" stylesheets="@Style.css" visible="false">
+            <children>
+                <Button fx:id="signOutButton" layoutX="40.0" layoutY="105.0" mnemonicParsing="false"
+                        onAction="#handleSignOutButton" prefHeight="40.0" prefWidth="130.0" styleClass="signOutButton"
+                        stylesheets="@Style.css" text="Sign out">
+                    <font>
+                        <Font name="Segoe UI" size="16.0"/>
+                    </font>
+                </Button>
+                <Line endX="188.8665771484375" endY="94.79998016357422" startX="11.79998779296875"
+                      startY="94.79998016357422" stroke="#0066cc"/>
+                <ImageView fitHeight="45.0" fitWidth="130.0" layoutX="40.0" layoutY="2.0" pickOnBounds="true"
+                           preserveRatio="true" visible="false">
+                    <image>
+                        <Image url="@../image/username.png"/>
+                    </image>
+                </ImageView>
+                <Button fx:id="usernameButton2" contentDisplay="RIGHT" layoutX="30.0" layoutY="2.0"
+                        mnemonicParsing="false" prefHeight="45.0" prefWidth="150.0" styleClass="usernameButton"
+                        stylesheets="@Style.css">
+                    <font>
+                        <Font name="Segoe UI" size="14.0"/>
+                    </font>
+                </Button>
+                <ImageView fitHeight="27.0" fitWidth="26.0" layoutX="148.0" layoutY="12.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../image/user.png"/>
+                    </image>
+                </ImageView>
+                <Label fx:id="welcome" alignment="CENTER" layoutX="10.0" layoutY="45.0" prefHeight="47.0"
+                       prefWidth="177.0">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

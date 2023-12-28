@@ -1,0 +1,122 @@
+.launchButton {
+    -fx-background-color: #12225B;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-font-size: 14;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.launchButton:hover {
+    -fx-text-fill: #F2BE00;
+}
+
+.roundedRectangle {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-border-color: black;
+}
+
+.flashcardWord {
+    -fx-background-color: whitesmoke;
+    -fx-background-radius: 40;
+    -fx-border-radius: 30;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, #8A8A8A, 30, 0.5, 0, 0);
+}
+
+.flashcardMeaning {
+    -fx-background-color: whitesmoke;
+    -fx-background-radius: 40;
+    -fx-border-radius: 30;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, #8A8A8A, 30, 0.5, 0, 0);
+}
+
+.flashcardWord:hover {
+    -fx-effect: dropshadow(gaussian, #FFC5B3, 30, 0.2, 0, 0);
+}
+
+.flashcardMeaning:hover {
+    -fx-effect: dropshadow(gaussian, #FFC5B3, 30, 0.2, 0, 0);
+}
+
+.studying {
+    -fx-background-color: whitesmoke;
+    -fx-border-radius: 30;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, #7F7F7F, 30, 0.2, 0, 0);
+}
+
+.challenging {
+    -fx-background-color: whitesmoke;
+    -fx-border-radius: 30;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, #A7E4F7, 30, 0.2, 0, 0);
+}
+
+.nextStudying {
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+    -fx-background-color: #12225B;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+}
+
+.nextStudying:hover {
+    -fx-text-fill: #FFDB93;
+    -fx-font-weight: bold;
+}
+
+.choiceButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20;
+    -fx-font-size: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: black;
+    -fx-border-width: 0.5;
+}
+
+.boxMatching {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20;
+}
+
+.boxMatching:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.boxMatching:pressed {
+    -fx-background-color: #FBE5D6;
+    -fx-background-radius: 20;
+}
+
+.notificationFinished {
+    -fx-background-color: whitesmoke;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-width: 0.5;
+    -fx-border-color: black;
+}
+
+.discardButton {
+    -fx-background-color: #C00000;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-font-size: 14;
+}
+
+.gameTitle {
+    -fx-font-family: 'DEBUG FREE TRIAL';
+    -fx-font-size: 80;
+    -fx-text-fill: white;
+}

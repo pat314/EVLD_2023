@@ -1,0 +1,507 @@
+.container {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.usernameButton {
+    -fx-background-color: transparent;
+    -fx-background-size: contain;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+    -fx-font-size: 14;
+    -fx-border-color: black;
+}
+
+.usernameButton:hover {
+    -fx-text-fill: brown;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-background-color: rgb(240, 240, 240);
+}
+
+.usernameAP {
+    -fx-background-color: white;
+}
+
+.menuButton {
+    -fx-background-color: white;
+}
+
+.menuButton:hover {
+    -fx-background-color: darkgray;
+}
+
+.indexLabel {
+    -fx-text-fill: rgb(0, 102, 204);
+}
+
+.bar {
+    -fx-border-color: transparent;
+}
+
+.menuIconButton {
+    -fx-background-color: transparent;
+}
+
+.menuIconButton:hover {
+    -fx-background-color: lightgrey;
+}
+
+.menuTextButton {
+    -fx-background-color: transparent;
+}
+
+.menuTextButton:hover {
+    -fx-text-fill: rgb(0, 102, 204);
+}
+
+.menuBackground {
+    -fx-background-color: white;
+}
+
+.showMenuButton {
+    -fx-background-color: transparent;
+}
+
+.showMenuButton:hover {
+    -fx-background-color: darkgray;
+}
+
+.signOutButton {
+    -fx-background-color: #C00000;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16;
+    -fx-cursor: hand;
+}
+
+.signOutButton:hover {
+    -fx-background-color: #F20000;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-font-size: 16;
+}
+
+.deleteSavedWordButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20;
+}
+
+.deleteSavedWordButton:hover {
+    -fx-background-color: tomato;
+}
+
+.dateAddedButton {
+    -fx-background-color: transparent;
+}
+
+.dateAddedButton:hover {
+    -fx-background-color: lightgrey;
+}
+
+
+.searchsaveword.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #000000;
+    -fx-border-width: 0.2px 0.2px 0.2px 0.2px;
+}
+
+.searchsaveword.text-field:hover {
+    -fx-background-color: #F2F2F2;
+    -fx-border-width: 1px 1px 1px 1px;
+}
+
+.inputfieldtranslate.text-area {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 0px 0px 0px 0px;
+}
+
+.inputfieldtranslate.text-area .content {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 0px 0px 0px 0px;
+}
+
+
+.selectLanguageButton {
+
+    -fx-background-color: #1D2A57;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+}
+
+.selectLanguageButton:hover {
+    -fx-background-color: #334999;
+}
+
+.defineword-field {
+    -fx-background-color: transparent;
+    -fx-border-color: #000000;
+    -fx-border-width: 0px 0px 1px 0px;
+}
+
+.defineword-field:hover {
+    -fx-background-color: #F2F2F2;
+}
+
+.worddetail-field {
+    -fx-background-color: transparent;
+    -fx-border-color: #000000;
+    -fx-border-width: 0.5px 0.5px 0.5px 0.5px;
+}
+
+.worddetail-field:hover {
+    -fx-background-color: #F2F2F2;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px 1px 1px 1px;
+}
+
+.addwordmeaning.text-area .content {
+    -fx-background-color: transparent;
+    -fx-border-color: #000000;
+    -fx-border-width: 0.5px 0.5px 0.5px 0.5px;
+}
+
+.addwordmeaning.text-area .content:hover {
+    -fx-background-color: #F2F2F2;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px 1px 1px 1px;
+}
+
+.savebutton {
+    -fx-background-color: #1D2A57;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-cursor: hand;
+}
+
+.savebutton:hover {
+    -fx-background-color: #334999;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-font-size: 14;
+}
+
+.savebutton:pressed {
+    -fx-background-color: #1D2A57;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-font-size: 14;
+}
+
+.discardbutton {
+    -fx-background-color: #C00000;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-font-size: 14;
+}
+
+.discardbutton:hover {
+    -fx-background-color: #F20000;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-font-size: 14;
+}
+
+.discardbutton:pressed {
+    -fx-background-color: #C00000;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-cursor: hand;
+}
+
+/*choice box in translate section*/
+
+.choice-box {
+    -fx-background-color: #1D2A57;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+    -fx-faint-focus-color: #2B2D30;
+    -fx-control-inner-background: #2B2D30;
+    -fx-tick-label-fill: white;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.choice-box:hover {
+    -fx-background-color: #334999;
+}
+
+.choice-box .label {
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+    -fx-font-weight: bold;
+}
+
+
+.deleteusernameButton {
+    -fx-background-color: transparent;
+    -fx-font-size: 18;
+    -fx-text-fill: red;
+}
+
+.deleteusernameButton:hover {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+    -fx-background-color: #FFAFAF;
+}
+
+.deleteAccountButton {
+    -fx-text-fill: red;
+    -fx-background-color: transparent;
+}
+
+.deleteAccountButton:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #C00000;
+}
+
+.circleTickButton {
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
+    -fx-border-color: black;
+    -fx-background-color: transparent;
+    -fx-background-radius: 50;
+}
+
+.settingOptionBar {
+    -fx-background-color: #E7E6E6;
+}
+
+.settingOptionButton {
+    -fx-background-color: transparent;
+}
+
+.settingOptionButton:hover {
+    -fx-background-color: #767171;
+    -fx-text-fill: white;
+}
+
+.circleTickButton {
+    -fx-border-width: 2;
+    -fx-border-radius: 50;
+    -fx-border-color: black;
+    -fx-background-color: transparent;
+    -fx-background-radius: 50;
+}
+
+.circleTickButton:hover {
+    -fx-background-color: green;
+}
+
+.whiteBackground {
+    -fx-background-color: white;
+}
+
+.backButton {
+    -fx-background-color: #595959;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+.backButton:hover {
+    -fx-font-size: 14;
+}
+
+.backButton:pressed {
+    -fx-background-color: #595959;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+.translate-field {
+    -fx-background-color: #D9D9D9;
+    -fx-border-color: #000000;
+    -fx-border-width: 0.5px 0.5px 0.5px 0.5px;
+}
+
+.translate-area .content:hover {
+    -fx-background-color: #F2F2F2;
+    -fx-border-width: 1px 1px 1px 1px;
+}
+
+.title {
+    -fx-font-size: 22;
+    -fx-font-family: "Segoe UI";
+}
+
+.boxShadow {
+    -fx-background-color: #0070C0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-cursor: hand;
+}
+
+.boxShadow:hover {
+    -fx-background-color: #008AF2;
+    -fx-font-size: 14;
+}
+
+.boxShadow:pressed {
+    -fx-border-width: 5;
+    -fx-border-color: grey;
+    -fx-background-color: #0070C0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-cursor: hand;
+}
+
+/*launch button in saved word section*/
+
+.launchButton {
+    -fx-background-color: #12225B;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-font-size: 14;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.launchButton:hover {
+    -fx-background-color: #12225B;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-font-size: 14;
+    -fx-text-fill: #F2BE00;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/*List view in home section*/
+
+.list-view {
+    -fx-background-color: #ffffff; /* Set background color */
+    -fx-border-width: 1;
+}
+
+.list-cell {
+    -fx-background-color: #ffffff; /* Set background color for each cell */
+    -fx-text-fill: #000000; /* Set text color */
+    -fx-font-size: 15px; /* Set font size */
+}
+
+.list-cell:hover {
+    -fx-background-color: #c0c0c0; /* Set background color on hover */
+}
+
+.list-cell:selected {
+    -fx-background-color: #c0c0c0;
+    -fx-border-width: 1;
+}
+
+/*vbox in saved word section*/
+
+.container.vbox {
+    -fx-background-color: #f0f0f0; /* Set background color */
+    -fx-padding: 10px; /* Set padding */
+}
+
+/*See detail button in home section*/
+
+.seeDetailButton {
+    -fx-background-color: #27A1B0;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-font-size: 16;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.seeDetailButton:hover {
+    -fx-background-color: #1C727D;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-font-size: 16;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* Customize the TabPane */
+.tab-pane {
+    -fx-background-color: #FFFFFF; /* Set background color */
+}
+
+/* Customize the Tab */
+.tab {
+    -fx-background-color: #A0A0A0;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+
+/* Customize the selected Tab */
+.tab:selected {
+    -fx-background-color: #FFFFFF;
+}
+
+/* Customize the content of each tab */
+.tab-pane .tab-content {
+    -fx-background-color: #FFFFFF;
+}
+
+/*launch button in game section*/
+
+.launchGameButton {
+    -fx-background-color: #12225B;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-font-size: 18;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.launchGameButton:hover {
+    -fx-background-color: #12225B;
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+    -fx-border-width: 10;
+    -fx-font-size: 18;
+    -fx-text-fill: #F2BE00;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.stageColor {
+    -fx-background-radius: lightblue;
+}

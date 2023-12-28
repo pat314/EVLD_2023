@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="650.0" prefWidth="1200.0"
+            xmlns="http://javafx.com/javafx/20.0.1" fx:controller="com.example.final_dictionary.AddWordController">
+    <children>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="1200.0">
+            <children>
+                <AnchorPane fx:id="addwordPane" prefHeight="650.0" prefWidth="1203.0">
+                    <children>
+                        <Rectangle arcWidth="5.0" fill="#548235" height="50.0" stroke="TRANSPARENT" strokeType="INSIDE"
+                                   strokeWidth="0.0" width="1201.0"/>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="30.0" layoutY="5.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../image/addwords.png"/>
+                            </image>
+                        </ImageView>
+                        <Label layoutX="76.0" layoutY="-3.0" prefHeight="55.0" prefWidth="260.0" text="Add new words"
+                               textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Bold" size="30.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="wordField" layoutX="289.0" layoutY="70.0" prefHeight="64.0" prefWidth="616.0"
+                                   promptText="Enter your word here" styleClass="defineword-field"
+                                   stylesheets="@Style.css">
+                            <font>
+                                <Font name="Segoe UI Bold" size="36.0"/>
+                            </font>
+                        </TextField>
+                        <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="182.0" layoutY="70.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@../image/pencil.png"/>
+                            </image>
+                        </ImageView>
+                        <Label layoutX="217.0" layoutY="178.0" text="PoS">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="posField" layoutX="290.0" layoutY="170.0" prefHeight="40.0" prefWidth="616.0"
+                                   styleClass="worddetail-field" stylesheets="@Style.css">
+                            <font>
+                                <Font name="Segoe UI" size="14.0"/>
+                            </font>
+                        </TextField>
+                        <Label layoutX="217.0" layoutY="262.0" text="IPA">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="breIPA" layoutX="290.0" layoutY="254.0" prefHeight="40.0" prefWidth="616.0"
+                                   styleClass="worddetail-field" stylesheets="@Style.css">
+                            <font>
+                                <Font name="Segoe UI" size="14.0"/>
+                            </font>
+                        </TextField>
+                        <Label layoutX="171.0" layoutY="340.0" prefHeight="24.0" prefWidth="82.0" text="Meaning">
+                            <font>
+                                <Font name="Segoe UI Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <TextArea fx:id="addwordmeaning" layoutX="290.0" layoutY="340.0" prefHeight="186.0"
+                                  prefWidth="616.0" styleClass="addwordmeaning" stylesheets="@Style.css"
+                                  wrapText="true">
+                            <font>
+                                <Font name="Segoe UI" size="14.0"/>
+                            </font>
+                        </TextArea>
+                        <Button fx:id="discardButton" layoutX="830.0" layoutY="552.0" mnemonicParsing="false"
+                                onAction="#handleDiscardButton" prefHeight="40.0" prefWidth="119.0"
+                                styleClass="discardbutton" stylesheets="@Style.css" text="Discard">
+                            <font>
+                                <Font name="Segoe UI" size="14.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Button fx:id="saveButton" layoutX="988.0" layoutY="552.0" mnemonicParsing="false"
+                                onAction="#handleSaveButton" prefHeight="40.0" prefWidth="119.0" styleClass="savebutton"
+                                stylesheets="@Style.css" text="Save">
+                            <font>
+                                <Font name="Segoe UI" size="14.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <ImageView fx:id="alert1" fitHeight="17.0" fitWidth="18.0" layoutX="927.0" layoutY="115.0"
+                                   pickOnBounds="true" preserveRatio="true" visible="false">
+                            <image>
+                                <Image url="@../image/alert-icon-red-11.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="alert2" fitHeight="17.0" fitWidth="18.0" layoutX="927.0" layoutY="182.0"
+                                   pickOnBounds="true" preserveRatio="true" visible="false">
+                            <image>
+                                <Image url="@../image/alert-icon-red-11.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="alert3" fitHeight="17.0" fitWidth="18.0" layoutX="927.0" layoutY="344.0"
+                                   pickOnBounds="true" preserveRatio="true" visible="false">
+                            <image>
+                                <Image url="@../image/alert-icon-red-11.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="addNotiPane" disable="true" layoutX="359.0" layoutY="251.0" prefHeight="212.0"
+                    prefWidth="468.0" visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="212.0" layoutX="-1.0"
+                           stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 10; -fx-arc-width: 10;"
+                           width="481.0">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </Rectangle>
+                <Label layoutX="161.0" layoutY="14.0" text="Notification">
+                    <font>
+                        <Font name="Segoe UI Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="92.0" layoutY="94.0" text="Your new word is added successfully!">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Button layoutX="189.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleOkayButton1"
+                        prefHeight="40.0" prefWidth="102.0" styleClass="savebutton" stylesheets="@Style.css"
+                        text="Okay">
+                    <font>
+                        <Font name="Segoe UI" size="16.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="alertPane" disable="true" layoutX="326.0" layoutY="210.0" prefHeight="294.0"
+                    prefWidth="545.0" visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="294.0" layoutX="-1.0"
+                           stroke="TRANSPARENT" strokeType="INSIDE" width="545.0">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </Rectangle>
+                <Label layoutX="239.0" layoutY="14.0" text="Alert">
+                    <font>
+                        <Font name="Segoe UI Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="53.0" layoutY="80.0" prefHeight="90.0" prefWidth="435.0"
+                       text="The word to be added has already existed. Do you want to update it? Go back Home &gt; Choose word &gt; Clicking on the Pencil button to update it"
+                       textAlignment="JUSTIFY" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Button layoutX="219.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleOkayButton2"
+                        prefHeight="40.0" prefWidth="102.0" styleClass="savebutton" stylesheets="@Style.css"
+                        text="Okay">
+                    <font>
+                        <Font name="Segoe UI" size="16.0"/>
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+    <cursor>
+        <Cursor fx:constant="DEFAULT"/>
+    </cursor>
+</AnchorPane>

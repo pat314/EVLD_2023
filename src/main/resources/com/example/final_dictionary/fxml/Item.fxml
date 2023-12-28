@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:id="savedItem" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="150.0" prefWidth="804.0"
+      style="-fx-background-color: #EAEAEA; -fx-border-radius: 30;" xmlns="http://javafx.com/javafx/20"
+      fx:controller="com.example.final_dictionary.SavedItemController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="154.0" stroke="TRANSPARENT"
+                   strokeType="INSIDE" width="16.0"/>
+        <VBox prefHeight="150.0" prefWidth="722.0">
+            <children>
+                <Label fx:id="wordLabel" prefHeight="53.0" prefWidth="333.0" text="[Word]" textFill="#951d05">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="36.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="ipaLabel" prefHeight="24.0" prefWidth="155.0" text="[POS]">
+                    <font>
+                        <Font name="Segoe UI Italic" size="18.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="detailLabel" layoutY="10.0" prefHeight="72.0" prefWidth="837.0" text="[Meaning]"
+                       textFill="#12225b" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <AnchorPane prefHeight="150.0" prefWidth="98.0">
+            <children>
+                <Button fx:id="trashButton" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="17.0"
+                        mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="24.0" prefWidth="24.0"
+                        styleClass="menuIconButton" stylesheets="@Style.css" text="Button">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/trash.png"/>
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="noteButton" contentDisplay="GRAPHIC_ONLY" layoutX="50.0" layoutY="17.0"
+                        mnemonicParsing="false" onAction="#handleNoteButton" prefHeight="30.0" prefWidth="15.0"
+                        styleClass="menuIconButton" stylesheets="@Style.css" text="Button">
+                    <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/note.png"/>
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+    <cursor>
+        <Cursor fx:constant="DEFAULT"/>
+    </cursor>
+    <effect>
+        <DropShadow offsetX="3.0" offsetY="5.0">
+            <color>
+                <Color opacity="0.25328946113586426"/>
+            </color>
+        </DropShadow>
+    </effect>
+</HBox>

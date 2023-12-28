@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20"
+            fx:controller="com.example.final_dictionary.DeleteAccountController">
+    <children>
+        <Label layoutX="44.0" layoutY="14.0" prefHeight="54.0" prefWidth="172.0" text="Delete account">
+            <font>
+                <Font name="Segoe UI Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="44.0" layoutY="60.0" prefHeight="34.0" prefWidth="435.0"
+               text="Please enter your account information to continue:">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="200.0" layoutY="180.0" prefHeight="35.0" prefWidth="115.0" text="Email">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="200.0" layoutY="250.0" prefHeight="35.0" prefWidth="115.0" text="Username">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="200.0" layoutY="319.0" prefHeight="35.0" prefWidth="115.0" text="Password">
+            <font>
+                <Font name="Segoe UI" size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="email" layoutX="350.0" layoutY="180.0" prefHeight="35.0" prefWidth="465.0"/>
+        <TextField fx:id="username" layoutX="350.0" layoutY="250.0" prefHeight="35.0" prefWidth="465.0"/>
+        <PasswordField fx:id="password" layoutX="350.0" layoutY="319.0" prefHeight="35.0" prefWidth="465.0"/>
+        <Button fx:id="next" layoutX="680.0" layoutY="449.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0"
+                styleClass="savebutton" stylesheets="@Style.css" text="Next"/>
+        <AnchorPane fx:id="notificationAP" disable="true" layoutX="180.0" layoutY="175.0" prefHeight="250.0"
+                    prefWidth="538.0" styleClass="whiteBackground" stylesheets="@Style.css" visible="false">
+            <children>
+                <Label layoutX="183.0" layoutY="5.0" prefHeight="54.0" prefWidth="172.0" text="Notification">
+                    <font>
+                        <Font name="Segoe UI Bold" size="28.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="notificationText" alignment="CENTER" layoutX="9.0" layoutY="107.0" prefHeight="35.0"
+                       prefWidth="519.0"/>
+                <Button fx:id="okay" layoutX="205.0" layoutY="194.0" mnemonicParsing="false" prefHeight="42.0"
+                        prefWidth="127.0" styleClass="savebutton" stylesheets="@Style.css" text="Okay"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="warningAP" disable="true" layoutX="93.0" layoutY="173.0" prefHeight="223.0" prefWidth="771.0"
+                    styleClass="whiteBackground" stylesheets="@Style.css" visible="false">
+            <children>
+                <Label layoutX="310.0" layoutY="5.0" prefHeight="43.0" prefWidth="151.0" text="Warning">
+                    <font>
+                        <Font name="Segoe UI Bold" size="36.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="12.0" layoutY="94.0" prefHeight="34.0" prefWidth="746.0"
+                       text="Once you confirm delete your account, all of your data will be lost. Do you want to continue?">
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </Label>
+                <Button fx:id="back" layoutX="480.0" layoutY="175.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="120.0" styleClass="backButton" stylesheets="@Style.css" text="Back"/>
+                <Button fx:id="confirm" layoutX="630.0" layoutY="175.0" mnemonicParsing="false" prefHeight="40.0"
+                        prefWidth="120.0" styleClass="discardbutton" stylesheets="@Style.css" text="Confirm"/>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
